@@ -7,4 +7,4 @@ before_script:
     - npm install -g typescript@next
     - npm install -g typings
     - typings install
-script: npm build
+script: npm run build
