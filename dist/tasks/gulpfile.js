@@ -13,9 +13,11 @@ const gulp = require('gulp');
 const tsc = require('gulp-typescript');
 const nodemon = require('gulp-nodemon');
 const del = require('del');
+let changedInPlace = require('gulp-changed-in-place'); //no typedef available :'(
+const rename = require('gulp-rename'); //typedef isn't in the correct module syntax :(
 let Gulpfile = class Gulpfile {
     default() {
-        return ['clean', 'buildTypescript', 'watch'];
+        return ['clean', 'configureEnvironment', 'buildTypescript', 'watch'];
     }
     clean(callback) {
         return del(["./dist/**"], callback);
@@ -24,6 +26,18 @@ let Gulpfile = class Gulpfile {
         let tsProject = tsc.createProject('tsconfig.json');
         let tsResult = tsProject.src().pipe(tsc(tsProject));
         return tsResult.js.pipe(gulp.dest('dist'));
+    }
+    configureEnvironment() {
+        let env = {
+            dev: 'dev',
+            prod: 'prod',
+            stage: 'stage'
+        };
+        console.log(env[process.env.NODE_ENV], `./environments/${env[process.env.NODE_ENV]}.ts`);
+        return gulp.src(`./environments/${env[process.env.NODE_ENV]}.ts`)
+            .pipe(changedInPlace({ firstPass: true }))
+            .pipe(rename('environment.ts'))
+            .pipe(gulp.dest("src"));
     }
     watch() {
         gulp.watch('src/*.ts', this.buildTypescript);
@@ -55,8 +69,15 @@ __decorate([
     __metadata('design:type', Function), 
     __metadata('design:paramtypes', []), 
     __metadata('design:returntype', void 0)
+], Gulpfile.prototype, "configureEnvironment", null);
+__decorate([
+    Decorators_1.Task(), 
+    __metadata('design:type', Function), 
+    __metadata('design:paramtypes', []), 
+    __metadata('design:returntype', void 0)
 ], Gulpfile.prototype, "watch", null);
 Gulpfile = __decorate([
+    //typedef isn't in the correct module syntax :(
     Decorators_1.Gulpclass(), 
     __metadata('design:paramtypes', [])
 ], Gulpfile);

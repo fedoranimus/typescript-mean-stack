@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "set NODE_ENV=dev&& gulp",
+    "stage": "set NODE_ENV=stage&& gulp",
+    "prod": "set NODE_ENV=prod&& gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,7 +26,9 @@
     "Q": "0.0.1",
     "del": "^2.2.1",
     "gulp": "^3.9.1",
+    "gulp-changed-in-place": "^2.0.3",
     "gulp-nodemon": "^2.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-typescript": "^2.13.6",
     "gulpclass": "^0.1.1",
     "nodemon": "^1.9.2",

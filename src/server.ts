@@ -1,4 +1,5 @@
 import * as express from 'express';
+import environment from './environment';
 
 class Server {
 
@@ -15,7 +16,7 @@ class Server {
     }
 
     private startServer() {
-        const server = this.app.listen(3000, "localhost", () => {
+        const server = this.app.listen(environment.port, environment.address, () => {
             const {address, port} = server.address();
             console.log('Listening on http://' + address + ':' + port);
         });

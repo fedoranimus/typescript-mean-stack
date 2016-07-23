@@ -25,6 +25,7 @@
     "del": "registry:dt/del#2.2.0+20160317120654",
     "gulp": "registry:dt/gulp#3.8.0+20160316155526",
     "gulp-nodemon": "registry:dt/gulp-nodemon#0.0.0+20160316155526",
+    "gulp-rename": "registry:dt/gulp-rename#0.0.0+20160316155526",
     "orchestrator": "registry:dt/orchestrator#0.0.0+20160316155526",
     "q": "registry:dt/q#0.0.0+20160613154756"
   }
