@@ -1,0 +1,40 @@
+{
+  "name": "typescript-mean-stack",
+  "version": "1.0.0",
+  "description": "A MEAN Stack written with Typescript and Mongoose",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedoranimus/typescript-mean-stack.git"
+  },
+  "keywords": [
+    "Typescript"
+  ],
+  "author": "Tim Turner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fedoranimus/typescript-mean-stack/issues"
+  },
+  "homepage": "https://github.com/fedoranimus/typescript-mean-stack#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.6",
+    "gulpclass": "^0.1.1",
+    "nodemon": "^1.9.2",
+    "typescript": "^2.0.0",
+    "typings": "^1.3.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.2.4",
+    "mongoose": "^4.5.5",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.1.0"
+  }
+}

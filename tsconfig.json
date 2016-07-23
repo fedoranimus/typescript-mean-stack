@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"compilerOptions":{
+		"target": "es6",
+		"module": "commonjs",
+		"emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+		"sourceMap": true,
+		"outDir": "dist",
+		"watch": true,
+		"preserveConstEnums": true
+	},
+	"exclude": [
+		"node_modules",
+        "typings"
+	]
+}
