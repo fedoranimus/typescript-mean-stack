@@ -4,9 +4,10 @@
   "description": "A MEAN Stack written with Typescript and Mongoose",
   "main": "server.js",
   "scripts": {
-    "start": "set NODE_ENV=dev&& gulp",
-    "stage": "set NODE_ENV=stage&& gulp",
-    "prod": "set NODE_ENV=prod&& gulp",
+    "start": "set NODE_ENV=dev&& gulp -- dev",
+    "stage": "set NODE_ENV=stage&& gulp -- dev",
+    "prod": "set NODE_ENV=prod&& gulp -- dev",
+    "build": "set NODE_ENV=dev&& gulp -- testBuild",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

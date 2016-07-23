@@ -16,8 +16,11 @@ const del = require('del');
 let changedInPlace = require('gulp-changed-in-place'); //no typedef available :'(
 const rename = require('gulp-rename'); //typedef isn't in the correct module syntax :(
 let Gulpfile = class Gulpfile {
-    default() {
+    dev() {
         return ['clean', 'configureEnvironment', 'buildTypescript', 'watch'];
+    }
+    testBuild() {
+        return ['clean', 'configureEnvironment', 'buildTypescript'];
     }
     clean(callback) {
         return del(["./dist/**"], callback);
@@ -50,7 +53,13 @@ __decorate([
     __metadata('design:type', Function), 
     __metadata('design:paramtypes', []), 
     __metadata('design:returntype', void 0)
-], Gulpfile.prototype, "default", null);
+], Gulpfile.prototype, "dev", null);
+__decorate([
+    Decorators_1.SequenceTask(), 
+    __metadata('design:type', Function), 
+    __metadata('design:paramtypes', []), 
+    __metadata('design:returntype', void 0)
+], Gulpfile.prototype, "testBuild", null);
 __decorate([
     Decorators_1.Task(), 
     __metadata('design:type', Function), 

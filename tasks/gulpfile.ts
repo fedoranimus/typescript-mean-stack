@@ -11,8 +11,13 @@ import rename = require('gulp-rename'); //typedef isn't in the correct module sy
 export class Gulpfile {
 
     @SequenceTask()
-    default() {
+    dev() {
         return ['clean', 'configureEnvironment', 'buildTypescript', 'watch'];
+    }
+
+    @SequenceTask()
+    testBuild() {
+        return ['clean', 'configureEnvironment', 'buildTypescript'];
     }
 
     @Task()

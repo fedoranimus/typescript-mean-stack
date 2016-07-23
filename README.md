@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/fedoranimus/typescript-mean-stack.svg?branch=master)](https://travis-ci.org/fedoranimus/typescript-mean-stack)
+
 # MEAN stack built with Typescript
 A project building out a MEAN stack with Typescript and Mongoose
 
