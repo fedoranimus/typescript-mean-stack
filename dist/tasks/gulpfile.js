@@ -33,7 +33,6 @@ let Gulpfile = class Gulpfile {
             prod: 'prod',
             stage: 'stage'
         };
-        console.log(env[process.env.NODE_ENV], `./environments/${env[process.env.NODE_ENV]}.ts`);
         return gulp.src(`./environments/${env[process.env.NODE_ENV]}.ts`)
             .pipe(changedInPlace({ firstPass: true }))
             .pipe(rename('environment.ts'))
