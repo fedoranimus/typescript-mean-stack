@@ -4,16 +4,28 @@
     "bcryptjs": "registry:dt/bcryptjs#2.3.0+20151217030501",
     "body-parser": "registry:dt/body-parser#0.0.0+20160619023215",
     "express": "registry:dt/express#4.0.0+20160708185218",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20160715232503",
+    "glob": "registry:dt/glob#5.0.10+20160317120654",
     "method-override": "registry:dt/method-override#0.0.0+20160317120654",
+    "mime": "registry:dt/mime#0.0.0+20160316155526",
+    "minimatch": "registry:dt/minimatch#2.0.8+20160317120654",
     "mongodb": "registry:dt/mongodb#2.1.0+20160602142941",
     "mongoose": "registry:dt/mongoose#4.5.4+20160721201159",
+    "mongoose-promise": "registry:dt/mongoose-promise#4.5.4+20160720003345",
+    "node": "registry:dt/node#6.0.0+20160720070758",
     "passport": "registry:dt/passport#0.2.0+20160720063208",
-    "passport-jwt": "registry:dt/passport-jwt#2.0.0+20160330163949"
+    "passport-jwt": "registry:dt/passport-jwt#2.0.0+20160330163949",
+    "passport-strategy": "registry:dt/passport-strategy#0.2.0+20160316155526",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160606155157"
   },
   "dependencies": {
     "cors": "registry:npm/cors#2.7.0+20160723033700"
   },
   "globalDevDependencies": {
-    "gulp": "registry:dt/gulp#3.8.0+20160316155526"
+    "del": "registry:dt/del#2.2.0+20160317120654",
+    "gulp": "registry:dt/gulp#3.8.0+20160316155526",
+    "gulp-nodemon": "registry:dt/gulp-nodemon#0.0.0+20160316155526",
+    "orchestrator": "registry:dt/orchestrator#0.0.0+20160316155526",
+    "q": "registry:dt/q#0.0.0+20160613154756"
   }
 }

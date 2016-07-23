@@ -4,6 +4,7 @@
   "description": "A MEAN Stack written with Typescript and Mongoose",
   "main": "server.js",
   "scripts": {
+    "start": "set NODE_ENV=dev&& gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +21,10 @@
   },
   "homepage": "https://github.com/fedoranimus/typescript-mean-stack#readme",
   "devDependencies": {
+    "Q": "0.0.1",
+    "del": "^2.2.1",
     "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.1.0",
     "gulp-typescript": "^2.13.6",
     "gulpclass": "^0.1.1",
     "nodemon": "^1.9.2",
