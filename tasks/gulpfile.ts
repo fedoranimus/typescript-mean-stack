@@ -48,7 +48,7 @@ export class Gulpfile {
 
     @Task()
     watch() {
-        gulp.watch('src/*.ts', this.buildTypescript);
+        gulp.watch('src/**/*.ts', this.buildTypescript);
         nodemon({
             script: './dist/src/server.js'
         });

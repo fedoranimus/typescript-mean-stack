@@ -10,6 +10,10 @@
 		"watch": true,
 		"preserveConstEnums": true
 	},
+	"filesGlob": [
+		"./src/**/*.ts",
+		"./custom_typings/**/*.d.ts"
+	],
 	"exclude": [
 		"node_modules",
 		"environments"

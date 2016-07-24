@@ -1,6 +1,8 @@
 import * as express from 'express';
 import { Middleware } from './config/middleware/Middleware';
 import environment from './environment';
+import * as mongoose from 'mongoose';
+mongoose.Promise = global.Promise;
 
 class Server {
 
@@ -13,7 +15,7 @@ class Server {
     constructor() {
         this.app = express();
 
-        // configure server & middleware
+        // configure server, mongoose & middleware
         this.config();
 
         // start server
@@ -22,6 +24,12 @@ class Server {
 
     private config() {
         this.app.use(Middleware.configuration);
+
+        mongoose.connection.once('open', () => {
+            console.log('Connected to Mongoose at', environment.mongoConnectionString);
+        });
+
+        mongoose.connect(environment.mongoConnectionString);
     }
 
     private startServer() {
