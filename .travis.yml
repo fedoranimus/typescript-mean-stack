@@ -7,4 +7,5 @@ before_script:
     - npm install -g typescript@next
     - npm install -g typings
     - typings install
+    - cd server
 script: npm run build
