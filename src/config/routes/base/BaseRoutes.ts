@@ -9,7 +9,7 @@ export class BaseRoutes {
     constructor() {}
 
     get routes(): express.Express {
-        this.app.use("/api/user", new UserRoutes().routes);
+        this.app.use("/api/", new UserRoutes().routes);
         this.app.use("/auth", new AuthRoutes().routes);
         return this.app;
     }
