@@ -4,8 +4,6 @@ node_js:
 
 before_script:
     - cd server
-    - npm install -g gulp
-    - npm install -g typescript@next
-    - npm install -g typings
+    - npm install
     - typings install
 script: npm run build
