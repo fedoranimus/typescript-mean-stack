@@ -36,7 +36,48 @@ tasks/gulpfile.ts //write gulp tasks here
 
 ## API Routes
 
-TBD
+CREATE USER
+```
+METHOD: POST
+PARAMS: {"email":"test@test.com", "firstName":"Tester", "lastName":"McTesterson", "password":"pass123"}
+URL: http://localhost:3000/auth/signup
+RETURN: JWT or Error
+```
+
+LOGIN USER
+```
+METHOD: POST
+PARAMS: {"email":"test@test.com", "password":"pass123"}
+URL: http://localhost:3000/auth/login
+RETURN: JWT or Error
+```
+
+GET USER
+```
+METHOD: GET
+HEADER: authorization: "Bearer {JWT}"
+PARAMS: N/A
+URL: http://localhost:3000/api/user
+RETURN: User or Error
+```
+
+UPDATE USER
+```
+METHOD: PUT
+HEADER: authorization: "Bearer {JWT}"
+PARAMS: {"email":"test@test.com", "firstName":"Tester", "lastName":"McTesterson", "password":"pass123"}
+URL: http://localhost:3000/api/user
+RETURN: User or Error
+```
+
+REMOVE USER
+```
+METHOD: DELETE
+HEADER: authorization: "Bearer {JWT}"
+PARAMS: N/A
+URL: http://localhost:3000/api/user
+RETURN: User or Error
+```
 
 ## Testing
 
