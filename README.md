@@ -14,7 +14,10 @@ This is a basic Express server running on NodeJS built with Typescript. It uses 
 
 ## How to Run
 
+### Server
+
 ```javascript
+cd server //change directory to the server
 npm install //install the npm dependencies
 typings install //install the TypeDefs (will migrate to npm @types soon)
 npm start //build the project with dev environment, start Nodemon, watch for changes
@@ -24,6 +27,12 @@ Additionally, NODE_ENV can be specified to change the environment the server wil
 ```javascript
 npm run stage //uses environment/stage.ts
 npm run prod //uses environment/prod.ts
+```
+
+### Client
+
+```javascript
+TDB
 ```
 
 ## Using Gulp
