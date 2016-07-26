@@ -29,18 +29,18 @@ npm run stage //uses environment/stage.ts
 npm run prod //uses environment/prod.ts
 ```
 
-### Client
-
-```javascript
-TDB
-```
-
-## Using Gulp
+#### Using Gulp
 
 This project includes two gulpfiles:
 ```javascript
 gulpfile.js //eval and compile gulpfile.ts; all paths must be relative to this file
 tasks/gulpfile.ts //write gulp tasks here
+```
+
+### Client
+
+```javascript
+TBD
 ```
 
 ## API Routes
